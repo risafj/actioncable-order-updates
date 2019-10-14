@@ -1,2 +1,11 @@
 <h1>Order list</h1>
 <%= render @orders %>
+<br />
+
+<%=form_with model: @order, method: :post do |f| %>
+  <label>
+  <span>Add item:</span>
+  <%= f.text_field :item %>
+  <%= f.submit name: nil %>
+  </label>
+<%- end %>
