@@ -1,0 +1,8 @@
+h1 Order list
+= render @orders
+
+= form_with model: @order, method: :post do |f|
+  label
+    span Add item:
+    = f.text_field :item
+    = f.submit name: nil
